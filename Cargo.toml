@@ -1,0 +1,14 @@
+[package]
+name = "AdventOfCode2020"
+version = "0.1.0"
+authors = ["GrumpyMetalGuy <peter.keyzers@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+fehler = "1.0"
+anyhow = "1.0"
+thiserror = "1.0"
+log = "0.4"
+log4rs = "0.13"
