@@ -1,20 +1,8 @@
 use anyhow::Error;
 use ndarray::{Array2, ArrayBase};
-use std::fs::File;
-use std::io::{BufRead, BufReader, Read};
 use std::iter::Enumerate;
 use std::ops::Index;
-
-pub fn read_file(filename: &str) -> String {
-    let mut output = String::new();
-
-    File::open(filename)
-        .expect("Unable to open file")
-        .read_to_string(&mut output)
-        .expect("Unable to read filename");
-
-    output
-}
+use AdventOfCode2020::utils::read_file;
 
 fn run() -> Result<(), Error> {
     let input_file = read_file("src/day3.txt");
