@@ -1,10 +1,10 @@
 use anyhow::Error;
 use regex::Regex;
 use std::collections::HashSet;
-use AdventOfCode2020::utils::read_file;
+use AdventOfCode2020::utils::lines_from_file;
 
 fn run() -> Result<(), Error> {
-    let input = read_file("src/day4.txt");
+    let input = lines_from_file("src/day4.txt")?;
 
     let mut current_passport_keys: HashSet<&str> = HashSet::new();
     let mut current_strict_keys: HashSet<&str> = HashSet::new();
@@ -25,7 +25,7 @@ fn run() -> Result<(), Error> {
         .cloned()
         .collect();
 
-    for input_line in input.split("\n") {
+    for input_line in &input {
         if input_line.trim() == "" {
             // End of record. Check keys.
             if required_keys.is_subset(&current_passport_keys) {

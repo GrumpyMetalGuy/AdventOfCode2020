@@ -2,12 +2,10 @@ use anyhow::Error;
 use ndarray::{Array2, ArrayBase};
 use std::iter::Enumerate;
 use std::ops::Index;
-use AdventOfCode2020::utils::read_file;
+use AdventOfCode2020::utils::lines_from_file;
 
 fn run() -> Result<(), Error> {
-    let input_file = read_file("src/day3.txt");
-
-    let lines = input_file.split("\n").collect::<Vec<_>>();
+    let lines = lines_from_file("src/day3.txt")?;
 
     let number_of_lines = lines.len();
     let number_of_columns = lines[0].len();
