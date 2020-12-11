@@ -43,7 +43,7 @@ fn part_one() -> Result<(), Error> {
 fn part_two() -> Result<(), Error> {
     let input = lines_from_file("src/day10.txt")?;
 
-    let mut nodes = input
+    let nodes = input
         .iter()
         .map(|n| n.parse::<u32>().unwrap())
         .collect::<HashSet<u32>>();
@@ -73,8 +73,8 @@ fn part_two() -> Result<(), Error> {
 }
 
 fn run() -> Result<(), Error> {
-    part_one();
-    part_two();
+    part_one()?;
+    part_two()?;
 
     Ok(())
 }

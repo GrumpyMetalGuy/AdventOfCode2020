@@ -1,7 +1,5 @@
 use anyhow::Error;
-use ndarray::{Array2, ArrayBase};
-use std::iter::Enumerate;
-use std::ops::Index;
+use ndarray::Array2;
 use AdventOfCode2020::utils::lines_from_file;
 
 fn run() -> Result<(), Error> {

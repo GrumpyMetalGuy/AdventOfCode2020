@@ -1,6 +1,6 @@
 use anyhow::{anyhow, Error};
 use itertools::Itertools;
-use std::collections::{HashSet, VecDeque};
+use std::collections::VecDeque;
 use AdventOfCode2020::utils::lines_from_file;
 
 fn part_one() -> Result<i64, Error> {

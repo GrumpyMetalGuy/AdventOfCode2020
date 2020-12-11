@@ -72,10 +72,6 @@ fn run() -> Result<(), Error> {
     let input = lines_from_file("src/day8.txt")?;
     let program = input.iter().map(|l| Instruction::new(l)).collect();
 
-    for line in input {
-        let instruction_tokens = line.split(" ").collect::<Vec<_>>();
-    }
-
     let (_, part_one_answer) = part_one(&program)?;
 
     println!("Part one answer: {}", part_one_answer);
